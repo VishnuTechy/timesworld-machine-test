@@ -1,0 +1,79 @@
+.login-container {
+    background-color: white;
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .divider::before {
+    margin-right: 0.5em;
+  }
+  .divider::after {
+    margin-left: 0.5em;
+  }
+  
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #3D3D3D;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .github-icon-circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #3D3D3D;
+    border-radius: 50%;
+    background-color: #3D3D3D; /* GitHub dark color */
+    color: white;
+    font-weight: 700;
+    font-family: 'Noto Sans';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 5px #3D3D3D;
+  }
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 2rem 1rem;
+    }
+  
+    .login-form {
+      max-width: 100%;
+      padding: 1rem;
+    }
+  
+    .social-icons {
+      gap: 1rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .login-form h2,
+    .login-form p {
+      text-align: center;
+    }
+  }
+  

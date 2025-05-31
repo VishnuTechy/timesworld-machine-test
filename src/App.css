@@ -12,9 +12,22 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+body {
+  background-color: #f9f9f9; /* Light gray background */
+  font-family: 'Noto Sans';
+  color: '#3D3D3D'
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.875rem;
+}
 
 .App-header {
-  background-color: #282c34;
+  background-color: #3D3D3D;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
