@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+:root {
+  --primary-color: #FFFFFF;
+  --secondary-color: #3D3D3D;
+}
 
 .App-logo {
   height: 40vmin;
@@ -13,9 +17,17 @@
   }
 }
 body {
-  background-color: #f9f9f9; /* Light gray background */
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   font-family: 'Noto Sans';
-  color: '#3D3D3D'
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #3D3D3D;
+  border-radius: 50%;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #3D3D3D;
 }
 
 .card-title {

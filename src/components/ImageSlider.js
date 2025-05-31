@@ -1,39 +1,58 @@
 // src/components/ImageSlider.js
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 
 const ImageSlider = () => {
+  const slides = [
+    {
+      id: 1,
+      label: "Slide 1",
+      imageUrl: "https://dummyimage.com/800x280/3d3d3d/3d3d3d" // hide text
+    },
+    {
+      id: 2,
+      label: "Slide 2",
+      imageUrl: "https://dummyimage.com/800x280/3d3d3d/3d3d3d"
+    },
+    {
+      id: 3,
+      label: "Slide 3",
+      imageUrl: "https://dummyimage.com/800x280/3d3d3d/3d3d3d"
+    }
+  ];
+
   return (
-    <Row className="mb-4">
-      <Col md={8} sm={12} className="mb-3 mb-md-0">
-        <div
-          style={{
-            backgroundColor: '#e0e0e0',
-            height: '280px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            borderRadius: '8px',
-          }}
-        >
-          <span style={{ color: '#3D3D3D', fontSize: '1.25rem' }}>Image</span>
-        </div>
-      </Col>
-      <Col md={4} sm={12}>
-        <div
-          style={{
-            backgroundColor: '#e0e0e0',
-            height: '280px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            borderRadius: '8px',
-          }}
-        >
-          <span style={{ color: '#3D3D3D', fontSize: '1.25rem' }}>Frame</span>
-        </div>
-      </Col>
-    </Row>
+    <Carousel indicators={true} nextLabel="" prevLabel="">
+      {slides.map((slide) => (
+        <Carousel.Item key={slide.id}>
+          <div style={{ position: 'relative' }}>
+            <img
+              src={slide.imageUrl}
+              alt={slide.label}
+              className="d-block w-100"
+              style={{
+                borderRadius: '8px',
+                objectFit: 'cover',
+                height: '280px',
+              }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                color: '#ffffff',
+                fontSize: '0.9rem',
+                fontWeight: 'bold',
+              }}
+            >
+              {slide.label}
+            </div>
+          </div>
+        </Carousel.Item>
+      ))}
+    </Carousel>
   );
 };
 
